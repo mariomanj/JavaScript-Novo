@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+</head>
+<body>
+    <h1>Bem-Vindo</h1>
+    Qual a sua nacionalidade? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="consultar()">
+    <div id='nac1'></div>
+    <script>
+        function consultar(){
+            var pais = document.getElementById('pais')
+            var res = document.getElementById('nac1')
+            var nacionalidade = String(pais.value)  
+            res.innerHTML = `<p>Você nasceu no(a) ${nacionalidade}</p>`
+            if (nacionalidade == 'Brasil' )
+            {
+            res.innerHTML += 'Você é Brasileiro!'
+            } else {
+            res.innerHTML += 'Você é Estrangeiro'
+                }
+            }
+            
+    </script>
+</body>
+</html>
